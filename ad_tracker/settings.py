@@ -13,7 +13,12 @@ import os
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 MEDIA_ROOT = os.path.join(SITE_ROOT, 'media')
+STATIC_ROOT = os.path.join(SITE_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(SITE_ROOT, "static"),
+)
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
