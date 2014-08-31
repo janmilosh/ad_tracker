@@ -24,8 +24,22 @@ html {
 }
 
 .wrapper {
-  width: 100%;
-  padding: 30px;
+  width: 1000px;
+  margin: 30px auto;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col {
+  padding: 0 15px;
+}
+
+.col-50 {
+  width: 50%;
+  float: left;
 }
 
 h1, h2, h3, p, ul li, a {
@@ -105,3 +119,19 @@ a:hover {
   padding: 5px 20px;
 }
 
+.panel {
+  background: #f1f1f1;
+  box-shadow: 0 0 4px rgba(60,60,60,0.2);
+}
+
+.panel h2 {
+  background: #e8e8e8;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.panel h3 {
+  border-top: 1px solid #ccc;
+  margin: 0;
+  padding: 10px 20px;
+}

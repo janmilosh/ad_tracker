@@ -1,6 +1,27 @@
 {% extends 'site_base.html' %}
 
 {% block content %}
-  <h1>This is the homepage.</h1>
-  <p>A test paragraph.</p>
+  
+  <div class="row">
+    <div class="col col-50">
+      <div class="panel">
+        <h2>Advertisements</h2>
+        {% for ad in ads %}
+          <h3><a href="/">{{ ad.name }}: {{ ad.description }}</a></h3>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="col col-50">
+      <div class="panel">
+        <h2>Newspapers</h2>
+        {% for newspaper in newspapers %}
+          <h3><a href="/">{{ newspaper.name }}</a></h3>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+  
+
 {% endblock %}
