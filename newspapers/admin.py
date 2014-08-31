@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from newspapers.models import Newspaper
+
+admin.site.register(Newspaper)

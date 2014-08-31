@@ -3,7 +3,7 @@
 An application for keeping track of newspaper advertisements.
 
 ## To Install Locally
-Clone ad_tracker and navigate to project root
+Clone ad_tracker and navigate to project root.
 
 Create virtual environment and install requirements:
 ```sh
@@ -17,7 +17,7 @@ export CFLAGS=-Qunused-arguments && export CPPFLAGS=-Qunused-arguments
 pip install -r requirements.txt
 ```
 
-Create database (database name is found in settings.py):
+Create database:
 ```sh
 createdb ad_tracker
 ```
