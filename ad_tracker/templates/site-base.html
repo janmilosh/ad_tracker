@@ -8,17 +8,23 @@
 </head>
 <body>
 
+
   <div class="header">
     <h1><a href="/">Ad Tracker</a></h1>
     <div class="header-nav">
-      <ul>
-        <li>
-          <a href="/">Current Ads</a>
-        </li>
-        <li>
-          <a href="/ad/archive">Archive</a>
-        </li>
-      </ul>
+      {% block menu %}
+        <ul>
+          <li>
+            <a href="/">Current Ads</a>
+          </li>
+          <li>
+            <a href="/ad/archive">Archive</a>
+          </li>
+          <li>
+            <a class="menu-button" href="/accounts/logout">Log Out</a>
+          </li>
+        </ul>
+      {% endblock %}
     </div>
   </div>
 

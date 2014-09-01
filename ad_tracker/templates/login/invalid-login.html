@@ -1,5 +1,13 @@
 {% extends "site-base.html" %}
 
+{% block menu %}
+  <ul>
+    <li>
+      <a class="menu-button" href="/accounts/login">Log In</a>
+    </li>
+  </ul>
+{% endblock %}
+
 {% block content %}
   
   <div class="row">
@@ -10,7 +18,7 @@
         <div class="panel-inner">
           <p class="login-text">Click <a href="/accounts/login">here</a> to try again.</p> 
         </div>
-        
+
       </div>
     </div>
   </div>
