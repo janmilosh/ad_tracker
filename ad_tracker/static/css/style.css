@@ -132,7 +132,8 @@ hr {
 /***********************************/
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
   width: 100%;
   height: 35px;
   border-radius: 5px;
@@ -154,6 +155,18 @@ input[type="submit"] {
   margin-bottom: 20px;
   margin-top: 2px;
   cursor: pointer;
+}
+
+label {
+  width: 100%;
+  display: block;
+}
+
+.helptext {
+  font-family: helvetica, sans-serif;
+  position: relative;
+  font-size: 15px;
+  top: -15px;
 }
 
 /***********************************/

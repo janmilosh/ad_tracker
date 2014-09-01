@@ -3,7 +3,10 @@
 {% block menu %}
   <ul>
     <li>
-      <a class="menu-button" href="/accounts/login">Log In</a>
+      <a class="menu-button" href="/login/">Log In</a>
+    </li>
+    <li>
+      <a class="menu-button" href="/register/">Register</a>
     </li>
   </ul>
 {% endblock %}
@@ -13,11 +16,12 @@
   <div class="row">
     <div class="col col-50 centered">
       <div class="panel">
-        <h2>You are now logged out.</h2>
-        <div class="panel-inner">
-          <p class="login-text">Click <a href="/accounts/login">here</a> to log in again.</p>
-        </div>
         
+        <h2>Your login details are invalid.</h2>
+        <div class="panel-inner">
+          <p class="login-text">Click <a href="/login/">here</a> to try again.</p> 
+        </div>
+
       </div>
     </div>
   </div>
