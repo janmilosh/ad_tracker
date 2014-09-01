@@ -1,0 +1,32 @@
+{% extends 'site-base.html' %}
+
+{% block content %}
+  
+  <div class="row">
+    <div class="col col-60">
+      <div class="panel">
+        <h2>Advertisement: {{ ad.name }}</h2>
+        <div class="panel-inner">
+          <p><strong>Description:</strong>&nbsp;&nbsp;{{ ad.description }}</p>
+          <p><strong>Start:</strong>&nbsp;&nbsp;{{ ad.start_date }}</p>
+          <p><strong>End:</strong>&nbsp;&nbsp;{{ ad.end_date }}</p>
+          <hr>
+          <p><strong>Company:</strong>&nbsp;&nbsp;{{ ad.client_company }}</p>
+          <p><strong>Contact:</strong>&nbsp;&nbsp;{{ ad.client_contact }}</p>
+          <p><strong>Phone:</strong>&nbsp;&nbsp;{{ ad.client_phone }}</p>
+          <p><strong>Email:</strong>&nbsp;&nbsp;{{ ad.client_email }}</p>
+        </div> 
+      </div>
+    </div>
+
+    <div class="col col-40">
+      <div class="panel">
+        <h2>Newspapers</h2>
+          {% for newspaper in ad.newspaper.all %}
+            <h3><a href="/newspaper/{{ newspaper.id }}/">{{ newspaper.name }}</a></h3>
+          {% endfor %}  
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}

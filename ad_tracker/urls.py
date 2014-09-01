@@ -7,4 +7,6 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'ad_tracker.views.home', name='home'),
+    url(r'^newspaper/', include('newspapers.urls')),
+    url(r'^ad/', include('ads.urls')),
 )
