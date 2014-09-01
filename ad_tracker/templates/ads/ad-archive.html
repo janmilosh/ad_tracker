@@ -1,0 +1,17 @@
+{% extends 'site-base.html' %}
+
+{% block content %}
+  
+  <div class="row">
+    <div class="col col-75 centered">
+      <div class="panel">
+        <h2>Archived Advertisements</h2>
+        {% for ad in ads %}
+          <h3><span class="archive-date">{{ ad.end_date }}</span><a href="/ad/{{ ad.id }}/">{{ ad.name }}: {{ ad.description }}</a>
+          </h3>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}

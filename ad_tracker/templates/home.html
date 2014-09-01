@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col col-50">
       <div class="panel">
-        <h2>Advertisements</h2>
+        <h2>Current Advertisements</h2>
         {% for ad in ads %}
           <h3><a href="/ad/{{ ad.id }}/">{{ ad.name }}: {{ ad.description }}</a></h3>
         {% endfor %}
@@ -14,7 +14,7 @@
 
     <div class="col col-50">
       <div class="panel">
-        <h2>Newspapers</h2>
+        <h2>All Newspapers</h2>
         {% for newspaper in newspapers %}
           <h3><a href="/newspaper/{{ newspaper.id }}/">{{ newspaper.name }}</a></h3>
         {% endfor %}

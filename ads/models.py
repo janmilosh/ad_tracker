@@ -4,7 +4,7 @@ from newspapers.models import Newspaper
 
 class Ad(models.Model):
     name = models.CharField(max_length=32)
-    description = models.CharField(max_length=32)
+    description = models.CharField(max_length=64)
     newspaper = models.ManyToManyField(Newspaper)
     start_date = models.DateField()
     end_date = models.DateField()

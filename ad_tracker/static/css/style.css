@@ -57,7 +57,22 @@ html {
   float: left;
 }
 
+.col-75 {
+  width: 75%;
+  float: left;
+}
+
+.col-50.centered {
+  float: none;
+  margin: 0 auto;
+}
+
 .col-60.centered {
+  float: none;
+  margin: 0 auto;
+}
+
+.col-75.centered {
   float: none;
   margin: 0 auto;
 }
@@ -139,7 +154,7 @@ hr {
 }
 
 .header-nav {
-  width: 400px;
+  width: 285px;
   float: right;
 }
 
@@ -185,13 +200,21 @@ hr {
   padding: 20px 20px 4px;
 }
 
+.archive-date {
+  display: inline-block;
+  font-size: 15px;
+  width: 115px;
+}
+
 /***********************************/
 /*          media queries          */
 /***********************************/
 
 @media (max-width: 767px) {
 
+  .col-40,
   .col-50,
+  .col-60,
   .col-75 {
     width: 100%;
     float: none;

@@ -1,14 +1,17 @@
 from django.contrib.auth import logout
 from django.shortcuts import redirect, render
+from django.utils import timezone
+import datetime
 
 from ads.models import Ad
 from newspapers.models import Newspaper
 
 def home(request):
-    ads = Ad.objects.all()
+    today = datetime.date.today()
+    ads = Ad.objects.filter(end_date__gte=today)
     newspapers = Newspaper.objects.all()
     
-    return render(request, "home.html", ({
+    return render(request, 'home.html', ({
         'ads': ads,
         'newspapers': newspapers,
     }))
