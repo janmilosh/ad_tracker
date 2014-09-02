@@ -1,0 +1,24 @@
+{% extends "site-base.html" %}
+
+{% block content %}
+  
+  <div class="row">
+    <div class="col col-60 centered">
+      <div class="panel">
+        <h2>New Newspaper</h2>
+        <div class="panel-inner">
+          
+          <form action="/newspaper/create/" method="post">
+            {% csrf_token %}
+            
+              {{form}}
+            
+            <input type="submit" value="Create Newspaper">
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}

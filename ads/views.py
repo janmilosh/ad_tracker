@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
 import datetime
+from forms import AdForm
+from django.core.context_processors import csrf
 
 from ads.models import Ad
 
@@ -18,3 +20,20 @@ def archive_ads(request):
     return render(request, 'ads/ad-archive.html', ({
         'ads': ads,
     }))
+
+def create(request):
+    if request.POST:
+        form = AdForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+        return redirect('/')
+    else:
+        form = AdForm
+
+    args = {}
+    args.update(csrf(request))
+
+    args['form'] = form
+
+    return render(request, 'ads/create-ad.html', args)
