@@ -49,6 +49,20 @@ def edit(request, ad_id=1):
         form = AdForm(instance=ad)
 
     return render(request, 'ads/edit-ad.html', ({
-        'form': form, 'ad': ad
+        'form': form, 'ad': ad,
     }))
 
+def confirm_delete(request, ad_id=1):
+    ad = get_object_or_404(Ad, id=ad_id)
+
+    return render(request, 'ads/delete-ad.html', ({
+        'ad': ad,
+    }))
+
+def delete(request, ad_id=1):
+    ad = get_object_or_404(Ad, id=ad_id)
+
+    ad.newspaper.clear()
+    ad.delete()
+
+    return redirect('/')
