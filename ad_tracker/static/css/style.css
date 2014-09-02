@@ -97,13 +97,17 @@ h1, h2, h3, p {
 }
 
 h2 a {
+  color: white;
   display: inline-block;
   float: right;
   font-size: 16px;
-  padding: 4px 6px;
-  background: #eee;
+  padding: 4px 6px 5px;
+  background: #E3712B;
   border-radius: 4px;
-  border: 1px solid #ccc;
+}
+
+h2 a:hover {
+  color: white;
 }
 
 p, label {
@@ -121,12 +125,12 @@ p.error {
 
 a {
   text-decoration: none;
-  color: #612BC5;
+  color: #5D3AD9;
 }
 
 a:hover {
   text-decoration: none;
-  color: #612BC5;
+  color: #5D3AD9;
 }
 
 hr {
@@ -172,14 +176,14 @@ input[type="submit"] {
   font-size: 18px;
   color: white;
   border: none;
-  background: #79CB52;
+  background: #52CB88;
   margin-bottom: 20px;
   margin-top: 2px;
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background: #68B544;
+  background: #48B679;
   -webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
@@ -217,7 +221,7 @@ ul.errorlist li {
   top: 0;
   height: 70px;
   width: 100%;
-  background: #568141;
+  background: #8772D3;
   padding: 18px 30px 0;
 }
 
@@ -260,7 +264,7 @@ ul.errorlist li {
 
 .header-nav ul li a.menu-button {
   background: #eee;
-  color: #568141;
+  color: #5D3AD9;
   text-transform: lowercase;
   border-radius: 3px;
   margin-left: 20px;
@@ -271,19 +275,20 @@ ul.errorlist li {
 /***********************************/
 
 .panel {
-  background: #f1f1f1;
+  background: #F8F4F2;
   box-shadow: 0 0 4px rgba(0,0,0,0.2);
   margin-bottom: 30px;
 }
 
 .panel h2 {
-  background: #D8DED5;
+  background: #F4AB7E;
+  color: white;
   padding: 10px 20px;
   margin: 0;
 }
 
 .panel h3 {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #e1e1e1;
   margin: 0;
   padding: 10px 20px;
 }
