@@ -1,0 +1,18 @@
+{% extends 'site-base.html' %}
+
+{% block content %}
+  
+  <div class="row">
+
+    <div class="col col-60 centered">
+      <div class="panel">
+        <h2>Delete: {{ newspaper.name }}</h2>
+        <div class="panel-inner">
+          <p>This is a permanent action. Do you wish to delete this newspaper?</p>
+          <p><a href="/newspaper/delete/{{ newspaper.id }}/">Yes. Delete the {{ newspaper.name }}.</a></p>
+        </div> 
+      </div>      
+    </div>
+  </div>
+  
+{% endblock %}

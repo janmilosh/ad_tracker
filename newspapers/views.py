@@ -48,3 +48,16 @@ def edit(request, newspaper_id=1):
         'form': form, 'newspaper': newspaper
     }))
 
+def confirm_delete(request, newspaper_id=1):
+    newspaper = get_object_or_404(Newspaper, id=newspaper_id)
+
+    return render(request, 'newspapers/delete-newspaper.html', ({
+        'newspaper': newspaper,
+    }))
+
+def delete(request, newspaper_id=1):
+    newspaper = get_object_or_404(Newspaper, id=newspaper_id)
+
+    newspaper.delete()
+
+    return redirect('/')

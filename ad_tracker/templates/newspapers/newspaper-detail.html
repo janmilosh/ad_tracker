@@ -16,6 +16,9 @@
           <p><strong>Contact Email:</strong>&nbsp;&nbsp;{{ newspaper.contact_email }}</p>
         </div>
       </div>
+      {% if not ads %}
+        <p><a href="/newspaper/confirm_delete/{{ newspaper.id }}/">Delete newspaper</a></p>
+      {% endif %}
     </div>
 
     <div class="col col-40">
