@@ -22,8 +22,7 @@ def create(request):
         form = NewspaperForm(request.POST)
         if form.is_valid():
             form.save()
-
-        return redirect('/')
+            return redirect('/')
     else:
         form = NewspaperForm
 
@@ -33,3 +32,19 @@ def create(request):
     args['form'] = form
 
     return render(request, 'newspapers/create-newspaper.html', args)
+
+def edit(request, newspaper_id=1):
+    newspaper = get_object_or_404(Newspaper, id=newspaper_id)
+    
+    if request.POST:
+        form = NewspaperForm(request.POST, instance=newspaper)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    else:
+        form = NewspaperForm(instance=newspaper)
+
+    return render(request, 'newspapers/edit-newspaper.html', ({
+        'form': form, 'newspaper': newspaper
+    }))
+

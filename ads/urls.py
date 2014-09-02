@@ -4,4 +4,5 @@ urlpatterns = patterns('ads.views',
     url(r'^(?P<ad_id>\d+)/$', 'ad'),
     url(r'archive/$', 'archive_ads'),
     url(r'^create/$', 'create'),
+    url(r'^edit/(?P<ad_id>\d+)/$', 'edit'),
 )

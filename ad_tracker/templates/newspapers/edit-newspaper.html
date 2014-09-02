@@ -3,18 +3,18 @@
 {% block content %}
   
   <div class="row">
-    <div class="col col-60 centered">
+    <div class="col col-50 centered">
       <div class="panel">
-        <h2>New Advertisement</h2>
+        <h2>New Newspaper</h2>
         <div class="panel-inner">
           
-          <form action="/ad/create/" method="post">
+          <form action="/newspaper/edit/{{ newspaper.id }}/" method="post">
             {% csrf_token %}
             
-              {{form}}
+              {{ form }}
             
-            <input type="submit" value="Create Ad">
-            {{form.error}}
+            <input type="submit" value="Save Changes">
+            {{ form.error }}
           </form>
 
         </div>

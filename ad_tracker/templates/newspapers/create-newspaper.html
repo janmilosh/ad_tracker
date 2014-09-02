@@ -3,7 +3,7 @@
 {% block content %}
   
   <div class="row">
-    <div class="col col-60 centered">
+    <div class="col col-50 centered">
       <div class="panel">
         <h2>New Newspaper</h2>
         <div class="panel-inner">
@@ -14,6 +14,7 @@
               {{form}}
             
             <input type="submit" value="Create Newspaper">
+            {{form.error}}
           </form>
 
         </div>

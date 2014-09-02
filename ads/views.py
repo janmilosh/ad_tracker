@@ -26,8 +26,7 @@ def create(request):
         form = AdForm(request.POST)
         if form.is_valid():
             form.save()
-
-        return redirect('/')
+            return redirect('/')
     else:
         form = AdForm
 
@@ -37,3 +36,19 @@ def create(request):
     args['form'] = form
 
     return render(request, 'ads/create-ad.html', args)
+
+def edit(request, ad_id=1):
+    ad = get_object_or_404(Ad, id=ad_id)
+    
+    if request.POST:
+        form = AdForm(request.POST, instance=ad)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    else:
+        form = AdForm(instance=ad)
+
+    return render(request, 'ads/edit-ad.html', ({
+        'form': form, 'ad': ad
+    }))
+
