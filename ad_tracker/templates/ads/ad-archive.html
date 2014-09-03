@@ -1,6 +1,8 @@
 {% extends 'site-base.html' %}
 
 {% block content %}
+
+{% if user.is_authenticated %}
   
   <div class="row">
     <div class="col col-75 centered">
@@ -13,5 +15,8 @@
       </div>
     </div>
   </div>
-  
+
+{% endif %}
+
 {% endblock %}
+

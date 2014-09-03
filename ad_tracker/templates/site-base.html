@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
   <div class="header">
     <h1><a href="/">Ad Tracker</a></h1>
     <div class="header-nav">
@@ -20,9 +19,17 @@
           <li>
             <a href="/ad/archive/">Archive</a>
           </li>
-          <li>
-            <a class="menu-button" href="/logout/">Log Out</a>
-          </li>
+          
+          {% if user.is_authenticated %}
+            <li>
+              <a class="menu-button" href="/logout/">Log Out</a>
+            </li>
+          {% else %}
+            <li>
+              <a class="menu-button" href="/login/">Log In</a>
+            </li>
+          {% endif %}
+          
         </ul>
       {% endblock %}
     </div>

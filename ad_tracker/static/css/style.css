@@ -233,11 +233,7 @@ ul.errorlist li {
 }
 
 .header h1 a {
-  color: #eee;
-}
-
-.header h1 a {
-  color: #eee;
+  color: white;
 }
 
 .header-nav {
@@ -256,14 +252,14 @@ ul.errorlist li {
 }
 
 .header-nav ul li a {
-  color: #eee;
+  color: white;
   font-size: 16px;
   padding: 5px 20px;
   text-transform: uppercase;
 }
 
 .header-nav ul li a.menu-button {
-  background: #eee;
+  background: #f1f1f1;
   color: #5D3AD9;
   text-transform: lowercase;
   border-radius: 3px;

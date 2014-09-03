@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render, render_to_response
 from django.contrib import auth
-from django.contrib.auth import logout
+from django.contrib.auth import logout, login, authenticate 
 from django.core.context_processors import csrf
 from forms import MyRegistrationForm
 from django.utils import timezone
@@ -10,6 +10,9 @@ from ads.models import Ad
 from newspapers.models import Newspaper
 
 def home(request):
+    if not request.user.is_authenticated():
+        return redirect('/login/')
+    
     today = datetime.date.today()
     ads = Ad.objects.filter(end_date__gte=today)
     newspapers = Newspaper.objects.all()
