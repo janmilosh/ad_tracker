@@ -1,0 +1,1 @@
+web: gunicorn ad_tracker.wsgi --log-file -

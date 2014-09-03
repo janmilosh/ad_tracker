@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
-import dj_database_url
-
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 MEDIA_ROOT = os.path.join(SITE_ROOT, 'media')
 STATIC_ROOT = os.path.join(SITE_ROOT, 'staticfiles')
@@ -36,9 +34,9 @@ TEMPLATE_DIRS = (
 SECRET_KEY = '!#ew3f$v4nd=$_zk=p(ith0s27=3-%)hh#uk-ia!e!b6vatvhl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -56,7 +54,6 @@ INSTALLED_APPS = (
     'django_extensions',
     'newspapers',
     'ads',
-    'storages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -77,7 +74,10 @@ WSGI_APPLICATION = 'ad_tracker.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE':  'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ad_tracker',
+    }
 }
 
 # Internationalization
@@ -92,14 +92,3 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
-
-try:
-    from local_settings import *
-except Exception as e:
-    print e.message
