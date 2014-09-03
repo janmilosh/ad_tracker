@@ -40,8 +40,11 @@ DEBUG = False
 
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ADMINS = (
+   ('Jan Milosh', 'janmilosh@gmail.com'),
+)
 
+MANAGERS = ADMINS
 
 # Application definition
 
