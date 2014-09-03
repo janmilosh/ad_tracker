@@ -73,12 +73,12 @@ WSGI_APPLICATION = 'ad_tracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE':  'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'ad_tracker',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE':  'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ad_tracker',
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/

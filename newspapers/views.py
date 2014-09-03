@@ -11,10 +11,12 @@ def newspaper(request, newspaper_id=1):
     today = datetime.date.today()
     newspaper = get_object_or_404(Newspaper, id=newspaper_id)
     ads = newspaper.ad_set.filter(end_date__gte=today)
+    ads_all = newspaper.ad_set.all()
 
     return render(request, 'newspapers/newspaper-detail.html', ({
         'newspaper': newspaper,
         'ads': ads,
+        'ads_all': ads_all,
     }))
 
 def create(request):

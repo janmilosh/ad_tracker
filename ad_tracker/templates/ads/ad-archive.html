@@ -12,6 +12,9 @@
           <h3><span class="archive-date">{{ ad.end_date }}</span><a href="/ad/{{ ad.id }}/">{{ ad.name }}: {{ ad.description }}</a>
           </h3>
         {% endfor %}
+        {% if not ads %}
+          <h3>There are no archived advertisements.</h3>
+        {% endif %}
       </div>
     </div>
   </div>

@@ -18,7 +18,7 @@
           <p><strong>Contact Email:</strong>&nbsp;&nbsp;{{ newspaper.contact_email }}</p>
         </div>
       </div>
-      {% if not ads %}
+      {% if not ads_all %}
         <p><a href="/newspaper/confirm_delete/{{ newspaper.id }}/">Delete newspaper</a></p>
       {% endif %}
     </div>
@@ -28,7 +28,10 @@
         <h2>Advertisements</h2>
           {% for ad in ads %}
             <h3><a href="/ad/{{ ad.id }}/">{{ ad.name }}</a></h3>
-          {% endfor %}  
+          {% endfor %}
+          {% if not ads %}
+            <h3>There are no current advertisements.</h3>
+          {% endif %} 
       </div>
     </div>
 
