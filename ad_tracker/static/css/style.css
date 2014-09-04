@@ -67,12 +67,21 @@ ul {
   float: left;
 }
 
+.col-100 {
+  width: 100%;
+  float: left;
+}
+
 .col-40.centered,
 .col-50.centered,
 .col-60.centered,
 .col-75.centered {
   float: none;
   margin: 0 auto;
+}
+
+#chart {
+  margin: 20px 0 40px;
 }
 
 /***********************************/
@@ -153,6 +162,7 @@ input[type="email"] {
   border-radius: 5px;
   border: 1px solid #CCC;
   font-size: 18px;
+  color: #555;
   margin-bottom: 20px;
   margin-top: 2px;
   padding: 0 10px;
@@ -161,6 +171,7 @@ input[type="email"] {
 select[multiple] {
   width: 100%;
   font-size: 16px;
+  color: #555;
   border-radius: 5px;
   margin-bottom: 20px;
   margin-top: 2px;
@@ -193,6 +204,7 @@ input[type="submit"]:hover {
 label {
   width: 100%;
   display: block;
+  color: #555;
 }
 
 .helptext {
